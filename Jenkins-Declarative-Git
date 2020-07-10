@@ -22,8 +22,8 @@ pipeline{
                     sh """
                         scp -o StrictHostKeyChecking=no target/myweb.war chenkiegcp3@tomcat.chensiyi.dev:/opt/tomcat8/webapps/
                         
-                        ssh chenkiegcp3@tomcat.chensiyi.co /opt/tomcat8/bin/shutdown.sh
-                        ssh chenkiegcp3@tomcat.chensiyi.co /opt/tomcat8/bin/startup.sh
+                        ssh -o StrictHostKeyChecking=no chenkiegcp3@tomcat.chensiyi.co /opt/tomcat8/bin/shutdown.sh
+                        ssh -o StrictHostKeyChecking=no chenkiegcp3@tomcat.chensiyi.co /opt/tomcat8/bin/startup.sh
                         
                     """
                 }
