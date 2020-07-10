@@ -8,5 +8,10 @@ pipeline{
                 git credentialsId: 'git-credentials', url: 'https://github.com/javahometech/myweb'
             }
         }
+        stage("Maven Build"){
+            steps{
+                git credentialsId: 'git-credentials', url: 'https://github.com/javahometech/myweb'
+            }
+        }
     }
 }
