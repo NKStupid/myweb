@@ -10,7 +10,8 @@ pipeline{
         }
         stage("Maven Build"){
             steps{
-                git credentialsId: 'git-credentials', url: 'https://github.com/javahometech/myweb'
+                def mvnHome = tool name: 'Maven', type: 'maven'
+                def mvnCMD = "${mvnHome}/bin/mvn"
             }
         }
     }
